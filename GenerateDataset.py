@@ -5,7 +5,7 @@ from astropy.io import fits
 from Find_Curve import *
 from scipy.signal import savgol_filter
 
-folder_path = "/Users/mikezagar/Desktop/ENPH 455/Training Image Data"
+folder_path = "path_to_folder"
 
 # Create a list of all .fits files in the folder
 fits_files = sorted(glob.glob(os.path.join(folder_path, "*.fits")))
@@ -38,6 +38,6 @@ data_2d = all_data.reshape(all_data.shape[0], -1)
 print("Number of images loaded:", len(data_2d))
 print("Shape of the stacked array:", data_2d.shape)
 
-np.savetxt('/Users/mikezagar/Desktop/ENPH 455/Training Data/data.txt', data_2d)
-np.savetxt('/Users/mikezagar/Desktop/ENPH 455/Training Data/rings.txt', rings)
-np.savetxt('/Users/mikezagar/Desktop/ENPH 455/Training Data/ring_vels.txt', ring_vels)
+np.savetxt('path_to_folder/data.txt', data_2d)
+np.savetxt('path_to_folder/rings.txt', rings)
+np.savetxt('path_to_folder/ring_vels.txt', ring_vels)
